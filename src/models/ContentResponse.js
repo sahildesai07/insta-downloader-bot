@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const contentResponseSchema = new mongoose.Schema(
     {
+        chatId: { type: String, required: true },
         owner: {
             userName: String,
             avatarUrl: String,
@@ -11,6 +12,7 @@ const contentResponseSchema = new mongoose.Schema(
             userName: String,
             firstName: String,
         },
+        messageId: String,
         requestUrl: String,
         shortCode: String,
         updatedAt: { type: Date, default: Date.now },
